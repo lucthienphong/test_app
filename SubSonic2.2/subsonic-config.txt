@@ -1,0 +1,16 @@
+<configSections>
+		
+    <section name="SubSonicService" type="SubSonic.SubSonicSection, SubSonic" allowDefinition="MachineToApplication" restartOnExternalChanges="true" requirePermission="false" />
+	</configSections>
+  <connectionStrings>
+    <clear />
+    <add name="SweetSoft_QLBH" connectionString="Data Source=.\SQLEXPRESS;Integrated Security=True;AttachDBFilename=|DataDirectory|SweetSoft_QLBH.mdf;User Instance=true" />
+  </connectionStrings>
+  </connectionStrings>
+
+  <SubSonicService defaultProvider="DataAcessProvider" enableTrace="false" templateDirectory="">
+    <providers>
+      <clear />
+      <add name="DataAcessProvider" type="SubSonic.SqlDataProvider, SubSonic" connectionStringName="SweetSoft_QLBH" generatedNamespace="SweetSoft.QuanLyBanHang.DataAccess" generateLazyLoads="true" />
+    </providers>
+  </SubSonicService>
